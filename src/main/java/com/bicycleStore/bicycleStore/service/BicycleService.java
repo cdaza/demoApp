@@ -4,6 +4,8 @@ import com.bicycleStore.bicycleStore.model.BicycleModel;
 import com.bicycleStore.bicycleStore.repository.BicycleRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class BicycleService {
 
@@ -15,5 +17,9 @@ public class BicycleService {
 
     public BicycleModel createUser(BicycleModel bicycle) {
         return bicycleRepository.save(bicycle);
+    }
+
+    public List<BicycleModel> findAllUsers() {
+        return bicycleRepository.findAll();
     }
 }
