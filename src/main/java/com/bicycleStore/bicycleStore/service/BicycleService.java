@@ -15,11 +15,15 @@ public class BicycleService {
         this.bicycleRepository = bicycleRepository;
     }
 
-    public BicycleModel createUser(BicycleModel bicycle) {
+    public BicycleModel createBicycle(BicycleModel bicycle) {
         return bicycleRepository.save(bicycle);
     }
 
-    public List<BicycleModel> findAllUsers() {
+    public List<BicycleModel> findAllBicycles() {
         return bicycleRepository.findAll();
+    }
+
+    public void deleteBicycle(int id) {
+        bicycleRepository.deleteById(id);
     }
 }
